@@ -46,17 +46,17 @@ Korekcija distorzije je uradjena primenom funkcije cv2.undistort, kao jedan od n
 
 Original:
 
-![Original Chess Image](generated_images/originalChessImg.png)
+![Original Chess Image](generated_images/originalChessImg.PNG)
 
 Slika korektovane distorzije:
 
-![Undistored Chess Image](generated_images/undistoredChessImg.png)
+![Undistored Chess Image](generated_images/undistoredChessImg.PNG)
 
 ### Pipeline (single images)
 
 #### 1. Provide an example of a distortion-corrected image.
 
-![Undistored Road Image](generated_images/undistoredOriginalImg.png)
+![Undistored Road Image](generated_images/undistoredOriginalImg.PNG)
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
@@ -66,7 +66,7 @@ Za smanjenje šuma se koristio Gausov filter cv2.GaussianBlur linija 149.
 Za pravljenje binarne slike se koristi cv2.threshold linija 150.
 Posle toga se koristi canny = cv2.Canny(thrash, 120, 240) za detekciju ivica (linija 151), sto je kasnije korišćeno za detekciju linija, odnosno traka.
 
-![Binary Image](generated_images/BinaryImage.png)
+![Binary Image](generated_images/BinaryImage.PNG)
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -74,7 +74,7 @@ Za dobijanje transformacione matrice koristila se funckija cv2.getPerspectiveTra
 Ona za parametre ima ključne tačke na originalnoj slici (srcPoints) koje predstavljaju region interesa koji ce posle biti iscrtan kao trapez (pravougaonik) kod detekcije traka i drugi parametar je dstPoints gde ce se te tačke naći posle transformacije, kako ce izgledati ispravljena slika iz ptičje perspektive, linije 121-133.
 Transformaciona matrica se posle koristi kao parametar za funkciju cv2.warpPerspective(undistortedImg, transformMatrix, (imgW, imgH)) kojom se dobija transformisana slika, linija 141.
 
-![Perspective Transformed Image](generated_images/perspectiveTransformedImg.png)
+![Perspective Transformed Image](generated_images/perspectiveTransformedImg.PNG)
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
@@ -89,7 +89,7 @@ Nije uređeno još uvek.
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-![Lane Detection Image](generated_images/laneDetectionImg.png)
+![Lane Detection Image](generated_images/laneDetectionImg.PNG)
 
 ### Pipeline (video)
 
