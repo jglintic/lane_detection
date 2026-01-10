@@ -85,7 +85,8 @@ Na kraju se istim funkcijama za transformaciju perspektive vraca slika iz ptičj
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-Nije uređeno još uvek.
+Nije uređeno još uvek. Osnova postoji gde se koristi detekcija ivica, fitovanje trake funkcijom np.polyfit i iscrtavanje trake u funkciji drawLane.
+Potrebno je pravilno fitovati trake, izračunati poluprečnik krivine i iscrtavati trake kroz više frejmova/slika.
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
